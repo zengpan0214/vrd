@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="bootstrap3/jquery.min.js"></script>
+<script>
+    //1.创建json数组对象
+    let j1=["刘备","关羽","张飞"];
+    console.log(j1[1]);
+    //2.创建map对象
+    let j2={"name":"吕布","age":18};
+    console.log(j2.name);
+    console.log(j2.age);
+    //3.嵌套格式
+    let j3={"name":"苍老师","age":"25","friend":["传奇","坤坤"]}
+    console.log(j3.age);
+    console.log(j3.friend[0]);
+    console.log(typeof j2.age+":"+typeof j3.age);
+    //4.嵌套格式2
+    let j4=[{"name":"javeSE","author":"苍老师","price":20},{"name":"javaAPI","author":"传奇","price":30}];
+    console.log(j4[0].name);
+    //遍历json数组 里面的map
+    for (let i = 0; i < j4.length; i++) {
+        let book=j4[i];
+        console.log(book.author);
+    }
+    //json字符串和json对象
+    let jsonStr='["刘备","关羽","张飞"]';
+    //将json字符串转换成json对象
+    let j5=JSON.parse(jsonStr);
+    console.log(j5[2]);
+</script>
+</body>
+</html>
